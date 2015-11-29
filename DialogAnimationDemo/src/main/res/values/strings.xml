@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">DialogAnimationDemo</string>
+    <string name="dialog_with_anim_show">播放动画的对话框</string>
+    <string name="dialog_with_anim_exit">带退出动画的对话框</string>
+</resources>

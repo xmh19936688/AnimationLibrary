@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--向下平移5个自身-->
+    <translate
+        android:interpolator="@android:anim/accelerate_interpolator"
+        android:fromYDelta="0"
+        android:toYDelta="500%"
+        android:duration="300"/>
+
+    <!--平移同时淡出-->
+    <alpha
+        android:fromAlpha="1"
+        android:toAlpha="0"
+        android:duration="300"/>
+</set>

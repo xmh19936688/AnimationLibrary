@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ActivitySwitchAnimation</string>
+    <string name="this_is_second">这是第二个界面</string>
+    <string name="this_is_first">这是第一个</string>
+</resources>
