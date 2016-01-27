@@ -5,7 +5,7 @@ android {
     buildToolsVersion "23.0.1"
 
     defaultConfig {
-        applicationId "com.xmh.animingoujian"
+        applicationId "com.xmh.animingoujianwithanimator"
         minSdkVersion 15
         targetSdkVersion 23
         versionCode 1

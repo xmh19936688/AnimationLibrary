@@ -1,4 +1,4 @@
-package com.xmh.animingoujian;
+package com.xmh.animingoujianwithanimator;
 
 import android.animation.ValueAnimator;
 import android.annotation.TargetApi;

@@ -1,1 +1,1 @@
-include ':ActivitySwitchAnimation', ':DialogAnimationDemo', ':FrameAnimationImageViewDemo', ':AnimInGoujian'
+include ':ActivitySwitchAnimation', ':DialogAnimationDemo', ':FrameAnimationImageViewDemo', ':AnimInGoujianWithAnimator'
