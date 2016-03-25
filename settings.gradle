@@ -1,1 +1,1 @@
-include ':ActivitySwitchAnimation', ':DialogAnimationDemo', ':FrameAnimationImageViewDemo', ':AnimInGoujianWithAnimator', ':AnimInGoujianWithTransition', ':SwipeLayoutDemo'
+include ':ActivitySwitchAnimation', ':DialogAnimationDemo', ':FrameAnimationImageViewDemo', ':AnimInGoujianWithAnimator', ':AnimInGoujianWithTransition', ':SwipeLayoutDemo', ':ColorfulViewPager'
