@@ -1,11 +1,14 @@
 package com.github.lzyzsd.swipelayoutexample;
 
+import android.annotation.TargetApi;
 import android.content.Context;
+import android.os.Build;
 import android.support.v4.view.ViewCompat;
 import android.support.v4.widget.ViewDragHelper;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.ViewParent;
 import android.widget.LinearLayout;
 
 /**
@@ -31,6 +34,7 @@ public class SwipeLayout extends LinearLayout {
         this(context, attrs, -1);
     }
 
+    @TargetApi(Build.VERSION_CODES.HONEYCOMB)
     public SwipeLayout(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         viewDragHelper = ViewDragHelper.create(this, new DragHelperCallback());
@@ -38,6 +42,7 @@ public class SwipeLayout extends LinearLayout {
 
     @Override
     protected void onFinishInflate() {
+        super.onFinishInflate();
         contentView = getChildAt(0);
         actionView = getChildAt(1);
         actionView.setVisibility(GONE);
@@ -119,8 +124,20 @@ public class SwipeLayout extends LinearLayout {
         return super.onInterceptTouchEvent(ev);
     }
 
+    /**是否允许父控件拦截事件*/
+    private void requestParentDisallowInterceptTouchEvent(boolean disallowIntercept) {
+        final ViewParent parent = getParent();
+        if (parent != null) {
+            parent.requestDisallowInterceptTouchEvent(disallowIntercept);
+        }
+    }
+
     @Override
     public boolean onTouchEvent(MotionEvent event) {
+        //如果当前正在拖拽，则不允许父控件拦截事件
+        if(Math.abs(draggedX)!=dragDistance&&draggedX!=0){
+            requestParentDisallowInterceptTouchEvent(true);
+        }
         viewDragHelper.processTouchEvent(event);
         return true;
     }
